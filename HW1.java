@@ -1,0 +1,55 @@
+public class HW1 {
+   
+    public static void main(String[] args){
+        String[] test1 = {"C", "C", "C", "C", "C"};
+        System.out.println("Test 1 || odd || elements: " + test1.length + "\n" + promblem1(test1));
+        
+        String[] test2 = {"C", "C", "C", "C", "C", "C", "C", "C", "C", "C"};
+        System.out.println("\nTest 2 || even || elements: " + test2.length + "\n" + promblem1(test2));
+        
+        String[] test3 = {"C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C"};
+        System.out.println("\nTest 3 || odd || elements: " + test3.length + "\n" + promblem1(test3));
+
+        String[] test4 = {"C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C"};
+        System.out.println("\nTest 4 || even || elements: " + test4.length + "\n" + promblem1(test4));
+
+        String[] test5 = {"C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C"};
+        System.out.println("\nTest 5 || even || elements: " + test5.length + "\n" + promblem1(test5));
+
+        String[] test6 = {"C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C"};
+        System.out.println("\nTest 5 || odd || elements: " + test6.length + "\n" + promblem1(test6));
+
+        String[] test7 = {"C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C"};
+        System.out.println("\nTest 5 || even || elements: " + test7.length + "\n" + promblem1(test7));
+
+        String[] test8 = {"C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C"};
+        System.out.println("\nTest 8 || odd || elements: " + test8.length + "\n" + promblem1(test8));
+    }
+
+    public static String promblem1(String[] doors){
+        int currentIndex;
+        for (int i = 1; i <= doors.length; i++){ //keeps track of the ith door
+            currentIndex = i;
+            for(int j = 1; j <= doors.length; j++){
+                if(j%(i) == 0){
+                    if(currentIndex < doors.length){
+                        if(doors[currentIndex - 1].equals("C")){
+                            doors[currentIndex - 1] = "O";
+                        }
+                        else{
+                            doors[currentIndex - 1] = "C";
+                        }
+                    }
+                    //System.out.println("door " + currentIndex + " changed");
+                    currentIndex = currentIndex + i;
+                }
+            }
+            currentIndex = 0;
+        }
+        String output = "";
+        for (String door : doors){
+            output += door + " ";
+        }
+        return output;
+    }
+}
