@@ -1,4 +1,11 @@
-public class HW1 {
+/*
+ * There are 𝑛 doors in a hallway, numbered sequentially from 1 to 𝑛. 
+ * Initially, all are closed. You make 𝑛 passes by the doors, each time starting with door #1. 
+ * On the 𝑖th pass, you toggle the state of every 𝑖th door: if the door is closed, you open it; if it is open, you close it. 
+ * After the last pass, explain which doors are open and which are closed and why.
+ */
+
+public class HW1P1 {
    
     public static void main(String[] args){
         String[] test1 = {"C", "C", "C", "C", "C"};
