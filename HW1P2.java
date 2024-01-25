@@ -3,6 +3,10 @@
  * most times in the list. For example, the mode of [2,3,4,5,8,2,3,4,5,4,3,3] is 3 because three occurs 
  * the most times. For each representation of 𝑆 given below, describe using pseudo-code an algorithm to 
  * compute the mode following the pseudo-code conventions from our text.
+ * 
+ * Name: Meg Arney
+ * Class: CSCI 3342 - Algoritm Analysis
+ * Assignment: HW1
  */
 
 import java.util.Arrays;

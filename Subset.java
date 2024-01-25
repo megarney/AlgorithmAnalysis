@@ -8,6 +8,10 @@
  * algorithm, and based on the result (true/false) print out one of the following messages:
  * A is a subset of B.
  * A is NOT a subset of B.
+ * 
+ * Name: Meg Arney
+ * Class: CSCI 3342 - Algoritm Analysis
+ * Assignment: HW1
  */
 
 import java.util.Scanner;
