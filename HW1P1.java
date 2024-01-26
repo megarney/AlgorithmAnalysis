@@ -12,6 +12,7 @@
 public class HW1P1 {
    
     public static void main(String[] args){
+        
         String[] test1 = {"C", "C", "C", "C", "C"};
         System.out.println("Test 1 || odd || elements: " + test1.length + "\n" + promblem1(test1));
         
@@ -35,15 +36,25 @@ public class HW1P1 {
 
         String[] test8 = {"C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C"};
         System.out.println("\nTest 8 || odd || elements: " + test8.length + "\n" + promblem1(test8));
+
+        String[] test9 = {"C", "C", "C", "C"};
+        System.out.println("\nTest 9 || even || elements: " + test9.length + "\n" + promblem1(test9));
+
+        String[] test10 = {"C", "C", "C", "C", "C", "C", "C", "C", "C"};
+        System.out.println("\nTest 10 || odd || elements: " + test10.length + "\n" + promblem1(test10));
+        
+        String[] test11 = {"C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C"};
+        System.out.println("\nTest 8 || odd || elements: " + test11.length + "\n" + promblem1(test11));
+        
     }
 
     public static String promblem1(String[] doors){
         int currentIndex;
-        for (int i = 1; i <= doors.length; i++){ //keeps track of the ith door
+        for (int i = 1; i <= doors.length + 1; i++){ //keeps track of the ith door
             currentIndex = i;
-            for(int j = 1; j <= doors.length; j++){
+            for(int j = 1; j <= doors.length + 1; j++){
                 if(j%(i) == 0){
-                    if(currentIndex < doors.length){
+                    if(currentIndex < doors.length + 1){
                         if(doors[currentIndex - 1].equals("C")){
                             doors[currentIndex - 1] = "O";
                         }
@@ -51,7 +62,6 @@ public class HW1P1 {
                             doors[currentIndex - 1] = "C";
                         }
                     }
-                    //System.out.println("door " + currentIndex + " changed");
                     currentIndex = currentIndex + i;
                 }
             }
