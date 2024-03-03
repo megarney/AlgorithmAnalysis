@@ -1,8 +1,6 @@
 /*
  * Instructions:
  * 
- * Design a decrease-by-one algorithm for generating truth table options given the number of propositions 𝑛≥1.
- * 
  * Implement your algorithm in a file called TruthTableOptions.java. 
  * Your program should read an integer from the user representing the number of propositions. 
  * The program will output all the truth table options. 
