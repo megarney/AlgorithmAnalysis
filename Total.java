@@ -58,7 +58,7 @@ public class Total {
             for(int i = 0; i < B.length; i++){
                 B[i] = nums[A.length + i];
             }
-
+            
             return total(A) + total(B);
         }
         return nums[0];
