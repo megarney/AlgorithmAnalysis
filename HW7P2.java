@@ -1,4 +1,3 @@
-import java.util.HashSet;
 import java.util.Arrays;
 
 public class HW7P2 {
@@ -11,33 +10,33 @@ public class HW7P2 {
         }
         System.out.print(result1[result1.length-2] + "} Length: " + result1[result1.length-1]);
     }
-}
 
-public static int[] subcollection(int[] set){
-    Arrays.sort(set);
-
-    int length = 1;
-    int currLength = 1;
-    int index = 0;
-    for(int i = 0; i < set.length - 1; i++){
-        if(set[i] == set[i+1]+1){
-            currLength++;
-            if(length >= currLength){
-                index = i;
-                length = currLength;
+    public static int[] subcollection(int[] set){
+        Arrays.sort(set);
+    
+        int length = 1;
+        int currLength = 1;
+        int index = 0;
+        for(int i = 0; i < set.length - 1; i++){
+            if(set[i] == set[i+1]+1){
+                currLength++;
+                if(length >= currLength){
+                    index = i;
+                    length = currLength;
+                }
+            }
+            else{
+                length = 1;
             }
         }
-        else{
-            length = 1;
+    
+        int[] result = new int[length+1];
+        result[length] = length;
+        for(int i = 0; i < result.length-1; i++){
+            result[i] = set[index];
+            index++;
         }
+    
+        return result;
     }
-
-    int[] result = new int[length+1];
-    result[length] = length;
-    for(int i = 0; i < result.length-1; i++){
-        result[i] = set[index];
-        index++;
-    }
-
-    return result;
 }
